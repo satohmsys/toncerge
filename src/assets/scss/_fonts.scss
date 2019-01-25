@@ -1,0 +1,22 @@
+
+@font-face {
+  font-family: "YakuHanJP";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanJP/YakuHanJP-Medium.eot");
+  src: url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanJP/YakuHanJP-Medium.woff2") format("woff2"),
+    url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanJP/YakuHanJP-Medium.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "YakuHanJP";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanJP/YakuHanJP-Bold.eot");
+  src: url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanJP/YakuHanJP-Bold.woff2") format("woff2"),
+    url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanJP/YakuHanJP-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+$fontFamily: 'YakuHanJP', 'Noto Sans JP', sans-serif;
+$fontFamily_en: 'Rubik', sans-serif;

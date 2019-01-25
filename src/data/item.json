@@ -1,0 +1,24 @@
+{
+  "items": [
+  {
+    "name": "酸味",
+    "label": "acid"
+  },
+  {
+    "name": "甘み",
+    "label": "sweet"
+  },
+  {
+    "name": "苦み",
+    "label": "bitter"
+  },
+  {
+    "name": "コク",
+    "label": "body"
+  },
+  {
+    "name": "香り",
+    "label": "aroma"
+  }
+]
+}
