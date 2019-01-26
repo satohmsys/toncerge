@@ -118,8 +118,6 @@
     </section>
   </div>
 </template>
-
-
 <style>
 html {
   overflow-x: hidden;

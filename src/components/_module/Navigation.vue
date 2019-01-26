@@ -10,8 +10,9 @@
       <li class="siteNav__tab siteNav__tab--favorite">
         <router-link to="/favorite">
           <i class="siteNav__tab__icon">
+            {{favoritesLength}}
             {{getFavoritesLength}}
-            <i v-model="getFavoritesLength" class="siteNav__favoritesNum">{{getFavoritesLength}}</i>
+            <i v-if="0 < favoritesLength" class="siteNav__favoritesNum">{{favoritesLength}}</i>
           </i>
           <span class="siteNav__tab__text">お気に入り</span>
         </router-link>
@@ -39,16 +40,7 @@ import favoritesSetting from "@/components/_mixins/favoriteSetting";
 
 export default {
   name: "SiteNav",
-  mixins: [favoritesSetting],
-  data: function() {
-    return {
-    };
-  },
-  methods: {
-  },
-  created: function(){
-    console.log(this.getFavoritesLength)
-  }
+  mixins: [favoritesSetting]
 };
 </script>
 

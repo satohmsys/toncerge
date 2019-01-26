@@ -7,7 +7,7 @@
       <div class="beanData__like">
         <div class="button">
           <a
-            v-on:click="addFavorite"
+            v-on:click.stop="addFavorite,favoritesLength+=1"
             v-bind:data-favindex="data.link"
             v-bind:class="{'-is-favorite': getFavoriteStatus(data)}"
           >
@@ -61,7 +61,7 @@
           <div class="button button-secondary">
             <a v-bind:href="'http://tonya.co.jp' + data.link" target="_blank">詳細を見る <small>（珈琲問屋サイト）</small></a>
           </div>
-          <div v-on:click="modalToggle(modalPrefix)" class="detail__close">
+          <div v-on:click.stop="modalToggle(modalPrefix)" class="detail__close">
             CLOSE
           </div>
         </footer>     
@@ -127,7 +127,7 @@ export default {
       let favorites = favoritesStorage ? favoritesStorage.split(",") : [];
       let index = favorites.indexOf(favindex);
       let newFavorites = null;
-      let budge = document.querySelector(".siteNav__favoritesNum");
+      // let budge = document.querySelector(".siteNav__favoritesNum");
 
       if (index === -1) {
         target.classList.add("-is-favorite");
@@ -146,9 +146,9 @@ export default {
 
       window.localStorage.setItem("favorites", newFavorites);
       this.getFavoritesLength = newFavorites.length;
-      // this.$data.favoritesLength = newFavorites.length;
+      // this.favoritesLength = newFavorites.length;
       // this.setFavoritesLength(newFavorites.length)
-      console.log( this.$data.favoritesLength )
+      console.log('(Beantable.vue) addFavorite:',  this.favoritesLength )
 
       // if (budge) budge.innerText = newFavorites.length;
 
