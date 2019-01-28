@@ -49,7 +49,6 @@ export default {
       return false;
     }
   },
-  computed: {},
   methods: {
     setVal: function() {
       return {
