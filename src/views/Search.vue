@@ -59,14 +59,6 @@ export default {
   components: {
     Bar
   },
-  // beforeEach (to, from, next) {
-  //   console.log(to)
-  //   alert('aaa')
-  // },
-  // render: function (createElement, context) {
-  // },
-  // watch: {
-  // },
   methods: {
     modalToggle: function () {
       event.stopPropagation();
@@ -79,11 +71,6 @@ export default {
       let query = {};
       let newHistory = [];
 
-      // Array.prototype.forEach.call(inputs, function(e) {
-      //   query = {[e.name]: e.value};
-      //   // query.push({[e.name]: e.value});
-      // });
-      // query.push({"time": new Date() })
       Array.prototype.forEach.call(inputs, function(e) {
         query[e.name] = e.value;
       });
