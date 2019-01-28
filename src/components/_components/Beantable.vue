@@ -72,12 +72,12 @@
 
 <script>
 import Items from "@/data/item.json";
-import favoritesSetting from "@/components/_mixins/favoriteSetting";
+// import favoritesSetting from "@/components/_mixins/favoriteSetting";
 
 export default {
   name: "Beantable",
-  mixins: [favoritesSetting],
-  props: ["result", "item", "location", "favcount"],
+  // mixins: [favoritesSetting],
+  props: ["result", "item", "location"],
   data: function() {
     return {
       data: this.result,
@@ -118,16 +118,12 @@ export default {
      * お気に入り登録
      */
     addFavorite: function() {
-      event.stopPropagation();
-      event.preventDefault();
-
       let target = event.currentTarget;
       let favindex = target.getAttribute("data-favindex");
       let favoritesStorage = window.localStorage.getItem("favorites"); 
       let favorites = favoritesStorage ? favoritesStorage.split(",") : [];
       let index = favorites.indexOf(favindex);
       let newFavorites = null;
-      // let budge = document.querySelector(".siteNav__favoritesNum");
 
       if (index === -1) {
         target.classList.add("-is-favorite");
@@ -136,7 +132,7 @@ export default {
       } else {
         target.classList.remove("-is-favorite");
         newFavorites = favorites.filter(function(e) {
-          return e !== favorites.splice(index, 1)[0];
+          return e !== favorites[index];
         });
       }
 
@@ -145,15 +141,7 @@ export default {
       });
 
       window.localStorage.setItem("favorites", newFavorites);
-      this.getFavoritesLength = newFavorites.length;
       this.$emit( 'changeFavoritesLength', newFavorites.length )
-
-      // this.favoritesLength = newFavorites.length;
-      // this.setFavoritesLength(newFavorites.length)
-      console.log('(Beantable.vue) addFavorite:',  this.favoritesLength )
-
-      // if (budge) budge.innerText = newFavorites.length;
-
     },
     /**
      * モーダル開閉
