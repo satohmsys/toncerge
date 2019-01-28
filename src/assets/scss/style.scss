@@ -457,3 +457,15 @@ a,
   opacity: 0;
   filter: blur(2px);
 }
+
+.fav-enter-active,
+.fav-leave-active {
+  transition: all $duration*5 cubic-bezier(0,1.87,.65,.47) 0.15s;
+  transform: scale(1);
+}
+
+.fav-enter,
+.fav-leave-to {
+  transition: all $duration*5 cubic-bezier(0,1.87,.65,.47) 0s;
+  transform: scale(0);
+}
