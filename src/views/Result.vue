@@ -20,7 +20,7 @@
       <section class="appSection">
         <ul class="beansList" v-if="results.length">
           <li v-for="result in results" :key="result.name">
-            <Beantable :result="result" :favcount="favcount" @changeFavoritesLength="setFavoriteLength"></Beantable>
+            <Beantable :result="result" @changeFavoritesLength="setFavoriteLength"></Beantable>
           </li>
         </ul>
         <div class="notFound" v-else >
@@ -60,7 +60,6 @@ import Data from "@/data/example.json";
 export default {
   name: "Result",
   // mixin: [favoritesSetting],
-  props: ["favcount"],
   components: {
     Beantable
   },
