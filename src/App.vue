@@ -39,15 +39,13 @@ export default {
       }
     },
     watch: {
-      favoritesLength: function(newValue,oldValue){
+      favCount: function(newValue,oldValue){
         console.log('(App.vue)watch',newValue,oldValue)
       }
     },
     computed: {
       getFavoritesLength: {
         get: function(){
-          // console.log( '(App.vue)get', this.favoritesLength)
-          // return this.favoritesLength;
           console.log( '(App.vue)get', this.favoritesLength)
           let favoritesStorage = window.localStorage.getItem("favorites"); 
           let favorites = favoritesStorage ? favoritesStorage.split(",") : [];
