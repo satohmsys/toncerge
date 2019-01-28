@@ -10,7 +10,9 @@
       <li class="siteNav__tab siteNav__tab--favorite">
         <router-link to="/favorite">
           <i class="siteNav__tab__icon">
-            <i v-if="0 < favcount" class="siteNav__favoritesNum">{{favcount}}</i>
+            <transition name="fav">
+              <i v-if="0 < favcount" class="siteNav__favoritesNum">{{favcount}}</i>
+            </transition>
           </i>
           <span class="siteNav__tab__text">お気に入り</span>
         </router-link>
