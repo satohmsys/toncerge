@@ -1,5 +1,6 @@
 <template>
   <div class="search">
+    <WalkThrough></WalkThrough>
     <div class="wrap">
       <section class="appSection search__intro">
         <h2>つまみを左右に動かして、
@@ -12,24 +13,28 @@
           </span>
         </footer>
         <modal name="hint" height="auto" :scrollable="true">
-          <div class="detail wrap">  
-            <h3 class="detail__index">
-              検索のヒント
-            </h3>
+          <div class="detail wrap">
+            <h3 class="detail__index">検索のヒント</h3>
             <div class="detail__content">
               <h4 class="detail__content__index">はじめに</h4>
-              <p>それぞれの項目のツマミを左右に動かして、コーヒーの特徴の強さを指定してください。<br>「1」だとその特徴が弱く、「5」だとその特徴が強く現れるとされるコーヒー豆を検索できます。</p>
-              <p>また、検索履歴は一定期間<router-link to="/history">保存</router-link>されます。（ブラウザや端末を変えていない場合）</p>
+              <p>それぞれの項目のツマミを左右に動かして、コーヒーの特徴の強さを指定してください。
+                <br>「1」だとその特徴が弱く、「5」だとその特徴が強く現れるとされるコーヒー豆を検索できます。
+              </p>
+              <p>また、検索履歴は一定期間
+                <router-link to="/history">保存</router-link>されます。（ブラウザや端末を変えていない場合）
+              </p>
               <h4 class="detail__content__index">指定のコツ</h4>
-              <p>それぞれの値を「<strong class="numAppear">3</strong>」以上にするとヒットしやすくなります。</p>
-              <p> また、「甘み」「苦み」と、一見、相反するように捉えることができる項目がありますが、気にせずに指定してください。</p>
-              <figure><img src="@/assets/img/top-hint-sensaku.jpg" alt=""></figure>
+              <p>それぞれの値を「
+                <strong class="numAppear">3</strong>」以上にするとヒットしやすくなります。
+              </p>
+              <p>また、「甘み」「苦み」と、一見、相反するように捉えることができる項目がありますが、気にせずに指定してください。</p>
+              <figure>
+                <img src="@/assets/img/top-hint-sensaku.jpg" alt>
+              </figure>
               <p>コーヒーの味は様々な果実や野菜、食べ物や飲み物に例えられます。コーヒー自体が果実であり、気候や土地によって全く違う味になるため、甘くもあり、苦くもあり、また、心地の良い酸味があるものが存在するのです。</p>
             </div>
             <footer class="detail__footer">
-              <div v-on:click="modalToggle" class="detail__close">
-                CLOSE
-              </div>
+              <div v-on:click="modalToggle" class="detail__close">CLOSE</div>
             </footer>
           </div>
         </modal>
@@ -43,7 +48,7 @@
       </section>
       <section class="appSection">
         <div class="button button--primary" v-on:click="saveSearchQuery">
-          <router-link :to="{ name: 'Result'}" >好みのコーヒーをさがす</router-link>
+          <router-link :to="{ name: 'Result'}">好みのコーヒーをさがす</router-link>
         </div>
       </section>
     </div>
@@ -54,20 +59,23 @@
 import Bar from "@/components/_components/Search-bar";
 import Items from "@/data/item.json";
 
+import WalkThrough from "@/components/_components/Walkthrough.vue";
+
 export default {
   name: "Search",
   components: {
-    Bar
+    Bar,
+    WalkThrough
   },
   methods: {
-    modalToggle: function () {
+    modalToggle: function() {
       event.stopPropagation();
       event.preventDefault();
-      this.$modal.toggle('hint');      
+      this.$modal.toggle("hint");
     },
-    saveSearchQuery: function(){
+    saveSearchQuery: function() {
       let inputs = document.querySelectorAll("input");
-      let historyStorage = JSON.parse(window.localStorage.getItem('history'));
+      let historyStorage = JSON.parse(window.localStorage.getItem("history"));
       let query = {};
       let newHistory = [];
 
@@ -76,13 +84,13 @@ export default {
       });
       query["time"] = new Date();
 
-      if( historyStorage ) newHistory = historyStorage;
+      if (historyStorage) newHistory = historyStorage;
       newHistory.push(query);
-      
-      window.localStorage.setItem('history',JSON.stringify(newHistory));
 
-      console.log( query, newHistory )
-      console.log( window.localStorage.getItem('history'))
+      window.localStorage.setItem("history", JSON.stringify(newHistory));
+
+      console.log(query, newHistory);
+      console.log(window.localStorage.getItem("history"));
     }
   },
   data: () => {
@@ -115,7 +123,7 @@ export default {
     background-color: $color_main;
   }
 }
-.barsArea{
+.barsArea {
   max-width: 370px;
   margin-right: auto;
   margin-left: auto;
@@ -150,13 +158,12 @@ export default {
   }
 }
 
-
-.v--modal{
-  p{
+.v--modal {
+  p {
     line-height: 1.5;
   }
 
-  .detail__index{
+  .detail__index {
     margin-top: 0;
     line-height: 1;
     text-align: center;
@@ -164,7 +171,7 @@ export default {
     // font-size: $fontsize_m;
   }
 
-  .detail__content__index{
+  .detail__content__index {
     font-weight: bold;
     color: $color_main;
   }
@@ -174,6 +181,6 @@ export default {
     padding-left: 2px;
     font-size: 1.15em;
     color: #d86414;
-  }  
+  }
 }
 </style>

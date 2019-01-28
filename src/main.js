@@ -3,13 +3,14 @@ import App from "./App.vue";
 import router from "./router";
 import "./registerServiceWorker";
 import VModal from "vue-js-modal";
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
 
-import "./utils/scrape"
+// require styles
 
 Vue.config.productionTip = false;
+Vue.use(VueAwesomeSwiper, /* { default global options } */ )
 Vue.use(VModal);
-
-// console.log("node ./node_modules/cheerio-httpcli/example/tonya.js")
 
 new Vue({
   router,
