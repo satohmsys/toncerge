@@ -20,7 +20,7 @@
         <transition name="delete">
           <ul class="beansList" v-if="! isDelete">
             <li v-for="favorite in favorites" :key="favorite.url">
-              <Beantable :location="favorite" :result="favorite"></Beantable>
+              <Beantable :location="favorite" :result="favorite" @changeFavoritesLength="setFavoriteLength"></Beantable>
             </li>
           </ul>
         </transition>
@@ -68,11 +68,15 @@
 
 <script>
 import Beantable from "@/components/_components/Beantable";
+// import favoritesSetting from "@/components/_mixins/favoriteSetting";
+
 import Items from "@/data/item.json";
 import Data from "@/data/example.json";
 
+
 export default {
   name: "Favorite",
+  // mixin: [favoritesSetting],  
   components: {
     Beantable
   },
@@ -83,9 +87,6 @@ export default {
       favorites: this.getFavorites(Data)
     };
   },
-  // computed: {
-
-  // },
   methods: {
     getFavorites: function(data) {
       let favoritesStorage = window.localStorage.getItem("favorites");
@@ -112,7 +113,13 @@ export default {
       event.stopPropagation();
       event.preventDefault();
       window.localStorage.removeItem("favorites");
-    }
+    },
+    /**
+     * App.vueのグローバル変数「FavCount」を変更
+     */
+    setFavoriteLength: function(l){
+      this.$parent.favCount = l
+    }    
   }
 };
 </script>

@@ -7,7 +7,7 @@
       <div class="beanData__like">
         <div class="button">
           <a
-            v-on:click.stop="addFavorite,favoritesLength+=1"
+            v-on:click.stop="addFavorite"
             v-bind:data-favindex="data.link"
             v-bind:class="{'-is-favorite': getFavoriteStatus(data)}"
           >
@@ -77,7 +77,7 @@ import favoritesSetting from "@/components/_mixins/favoriteSetting";
 export default {
   name: "Beantable",
   mixins: [favoritesSetting],
-  props: ["result", "item", "location"],
+  props: ["result", "item", "location", "favcount"],
   data: function() {
     return {
       data: this.result,
@@ -146,6 +146,8 @@ export default {
 
       window.localStorage.setItem("favorites", newFavorites);
       this.getFavoritesLength = newFavorites.length;
+      this.$emit( 'changeFavoritesLength', newFavorites.length )
+
       // this.favoritesLength = newFavorites.length;
       // this.setFavoritesLength(newFavorites.length)
       console.log('(Beantable.vue) addFavorite:',  this.favoritesLength )

@@ -20,7 +20,7 @@
       <section class="appSection">
         <ul class="beansList" v-if="results.length">
           <li v-for="result in results" :key="result.name">
-            <Beantable :result="result"></Beantable>
+            <Beantable :result="result" :favcount="favcount" @changeFavoritesLength="setFavoriteLength"></Beantable>
           </li>
         </ul>
         <div class="notFound" v-else >
@@ -52,11 +52,15 @@
 
 <script>
 import Beantable from "@/components/_components/Beantable";
+// import favoritesSetting from "@/components/_mixins/favoriteSetting";
 import Items from "@/data/item.json";
 import Data from "@/data/example.json";
 
+
 export default {
   name: "Result",
+  // mixin: [favoritesSetting],
+  props: ["favcount"],
   components: {
     Beantable
   },
@@ -145,25 +149,14 @@ export default {
       })
 
       return results;
+    },
+    /**
+     * App.vueのグローバル変数「FavCount」を変更
+     */
+    setFavoriteLength: function(l){
+      this.$parent.favCount = l
     }
   }
-  // created: ($route, $params) => {
-  //   console.log($route)
-  //   return false
-  // },
-  // beforeRouteEnter(to, from, next) {
-  // このコンポーネントを描画するルートが確立する前に呼ばれます。
-  // `this` でのこのコンポーネントへのアクセスはできません。
-  // なぜならばこのガードが呼び出される時にまだ作られていないからです!
-  //   console.log(to, from);
-  //   next(vm => {
-  //     let aa = vm.$children;
-
-  //     aa.forEach(function(e) {
-  //       console.log(e);
-  //     });
-  //   });
-  // }
 };
 </script>
 

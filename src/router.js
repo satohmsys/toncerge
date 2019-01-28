@@ -19,6 +19,7 @@ export default new Router({
     }, {
       path: "/result/",
       name: "Result",
+      props: true,
       component: require("@/views/Result.vue").default
     }, {
       path: "/favorite/",
