@@ -35,7 +35,7 @@ export default {
           console.log('(App.vue)val l=', l)
         }
         this.favoritesLength = Number(l);
-        // return l
+        return l
       }
     },
     watch: {
@@ -43,21 +43,24 @@ export default {
         console.log('(App.vue)watch',newValue,oldValue)
       }
     },
-    computed: {
-      getFavoritesLength: {
-        get: function(){
-          console.log( '(App.vue)get', this.favoritesLength)
-          let favoritesStorage = window.localStorage.getItem("favorites"); 
-          let favorites = favoritesStorage ? favoritesStorage.split(",") : [];
-          let l = favorites.length;
-          return l;
-        },
-        set: function( newValue ){
-          this.favoritesLength = newValue;
-          console.log( '(App.vue)set', this.favoritesLength)
-        }
-      }  
+    created: function(){      
+      this.favCount = this.setFavoritesLength(null)
     }
+    // computed: {
+    //   getFavoritesLength: {
+    //     get: function(){
+    //       console.log( '(App.vue)get', this.favoritesLength)
+    //       let favoritesStorage = window.localStorage.getItem("favorites"); 
+    //       let favorites = favoritesStorage ? favoritesStorage.split(",") : [];
+    //       let l = favorites.length;
+    //       return l;
+    //     },
+    //     set: function( newValue ){
+    //       this.favoritesLength = newValue;
+    //       console.log( '(App.vue)set', this.favoritesLength)
+    //     }
+    //   }  
+    // }
 };
 </script>
 
