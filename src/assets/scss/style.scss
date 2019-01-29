@@ -76,6 +76,14 @@ a,
 
 ////////////////////////////
 
+.serviceName {
+  font-feature-settings: "palt";
+  letter-spacing: 0.17em;
+  color: $brown;
+  font-weight: bold;
+  font-family: $fontFamily_en;
+}
+
 .appSection {
   &+.appSection {
     margin-top: 30px;
@@ -138,6 +146,12 @@ a,
   }
 }
 
+.-only-sp{
+  @media screen and (min-width: 480px ){
+    display: none;
+  }
+}
+
 
 
 ////////////////////////////
@@ -156,7 +170,7 @@ a,
     @media screen and (min-width: 768px) {
       &:hover a{
         background-color: darken($color_accent, 5%);
-        background-size: 200%;
+        background-size: 400%;
         background-position: right bottom;
       }
     }
@@ -164,7 +178,7 @@ a,
     &:focus a,
     &:active a {
       background-color: darken($color_accent, 5%);
-      background-size: 200%;
+      background-size: 400%;
       background-position: right bottom;
     }
 
@@ -224,7 +238,8 @@ a,
   }
 }
 
-.clearList {
+.clearList,
+.walkthrough__skip {
   font-size: $fontsize_s;
   cursor: pointer;
   text-align: right;

@@ -1,7 +1,7 @@
 <template>
-    <div class="walkthrough__page">
-      aaaaaa
-    </div>
+  <div class="walkthrough__page">
+    aaaaaa
+  </div>
 </template>
 
 <style lang="scss" scoped>

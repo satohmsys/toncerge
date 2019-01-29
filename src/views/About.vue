@@ -127,14 +127,6 @@ html {
 <style lang="scss" scoped>
 @import "../assets/scss/include";
 
-.serviceName {
-  font-feature-settings: "palt";
-  letter-spacing: 0.17em;
-  color: $brown;
-  font-weight: bold;
-  font-family: $fontFamily_en;
-}
-
 .appSection {
   &__index {
     margin-top: $space_s;
