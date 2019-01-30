@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <WalkThrough></WalkThrough>
+    <WalkThrough v-if="$route.path == '/'"></WalkThrough>
     <div class="wrap">
       <section class="appSection search__intro">
         <h2>つまみを左右に動かして、

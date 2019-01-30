@@ -59,7 +59,6 @@
 
   .swiper-pagination-bullet{
     background: $brown_bright;
-    
   }
   .swiper-pagination-bullet-active{
     background: $brown;
