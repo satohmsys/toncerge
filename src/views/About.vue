@@ -26,10 +26,10 @@
           <p>今、世の中にはコーヒーやコーヒー飲料が溢れています。
             <br>毎朝の一杯、休憩中の一杯…いろんなシーンであなたも触れていることでしょう。
           </p>
-          <p>でも、ありふれたコモディティなものではなく「コーヒーそのもの」を知る人は意外と少ない。そしてそのなかでも一握りと言われる高品質なものが、とても便利でとても速いスピードで手に入る世の中だからこそ、もっとわかりやすく体験できるようにしたい。そう思いこのサービスを開発しました。</p>
+          <p>でも、ありふれたコモディティなものではなく「コーヒーそのもの」を知る人は意外と少ない。そしてそのなかでも一握りと言われる高品質なものでさえも、とても便利にとても速いスピードで手に入る世の中だからこそ、もっとわかりやすく体験できるようにしたい。そう思いこのサービスを開発しました。</p>
           <p>あなたはコーヒーがお好きですか。お好きなら、今、どんなコーヒーが飲みたいですか。
             <br>
-            <router-link to="/search">検索画面</router-link>でスライダー（ツマミ）を左右に動かして、今の気分を教えてください。選んだ数値に近い評価を、珈琲問屋の腕利きのバイヤーから得ているコーヒーをご案内します。
+            <router-link to="/search">検索画面</router-link>でスライダー（ツマミ）を左右に動かして、今の気分を教えてください。珈琲問屋の腕利きのバイヤーから選んだ数値に近い評価を得ているコーヒーをご案内します。
           </p>
         </div>
       </div>
@@ -166,6 +166,7 @@ html {
 
     &__top {
       padding-bottom: $space_s;
+      font-weight: 500;
     }
 
     &__serviceName {
@@ -218,6 +219,7 @@ html {
         content: counter(count) ".";
         padding-right: 5px;
         font-family: $fontFamily_en;
+        font-weight: 500;
         color: $color_main;
       }
     }
@@ -261,6 +263,14 @@ html {
     padding-bottom: 1em;
     display: flex;
 
+    &:first-of-type{
+      &,dt,dd{
+        padding-top: 0;
+      }
+    }
+    &:not(:first-child) {
+      
+    }
     &:not(:last-child) {
       border-bottom: 1px solid $color_border;
     }
@@ -287,11 +297,12 @@ html {
   border-radius: 4px;
   background-color: $brown_bright;
   font-family: $fontFamily_en;
-  font-weight: 400;
+  font-weight: 500;
 
   &__index {
     margin-top: 0;
     line-height: 1;
+    font-weight: bold;
     color: $color_main;
     font-size: $fontsize_m;
   }

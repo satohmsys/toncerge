@@ -96,7 +96,7 @@ export default {
       line-height: 1;
       position: relative;
       bottom: -5px;
-      font-weight: normal;
+      font-weight: 500;
       font-family: $fontFamily_en;
       color: #e8e3df;
       font-size: 2em;
