@@ -6,7 +6,7 @@
     "serve": "npm run tonya & vue-cli-service serve",
     "prettier": "node ./node_modules/eslint --fix .js,.vue --ignore-path .gitignore",
     "tonya": "node ./node_modules/cheerio-httpcli/example/tonya.js",
-    "build": "NODE_ENV=production npm run tonya & vue-cli-service build",
+    "build": "npm run tonya & vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

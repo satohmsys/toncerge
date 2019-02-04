@@ -143,7 +143,7 @@
 
 .wt-enter,
 .wt-leave-to {
-  transform: translateX(-20px);
+  transform: scale(0.99);
   opacity: 0;
 }
 </style>
