@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "d62de4de334acc40a2ec858fba655ce6",
-    "url": "/img/icon-history-color.d62de4de.svg"
+    "revision": "e061cbade7a28bf6807361b64071c8c1",
+    "url": "/img/icon-favorite.e061cbad.svg"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "/robots.txt"
   },
   {
-    "revision": "e061cbade7a28bf6807361b64071c8c1",
-    "url": "/img/icon-favorite.e061cbad.svg"
+    "revision": "25a7dfe7e5d1135c34b523f4b9f0be53",
+    "url": "/img/icon-history.25a7dfe7.svg"
   },
   {
     "revision": "5ba539f471985c2361e8",
@@ -52,16 +52,16 @@ self.__precacheManifest = [
     "url": "/fonts/Rubik-Bold.87b4e0d5.ttf"
   },
   {
-    "revision": "0ac5ecdfd3dc3875dd80",
-    "url": "/js/app.ac3135b6.js"
+    "revision": "d62de4de334acc40a2ec858fba655ce6",
+    "url": "/img/icon-history-color.d62de4de.svg"
+  },
+  {
+    "revision": "5957d10e443922975eff",
+    "url": "/js/app.7fe63687.js"
   },
   {
     "revision": "5ba539f471985c2361e8",
     "url": "/js/chunk-vendors.d8a74318.js"
-  },
-  {
-    "revision": "25a7dfe7e5d1135c34b523f4b9f0be53",
-    "url": "/img/icon-history.25a7dfe7.svg"
   },
   {
     "revision": "b32b82d53a103764562c5c292ebbc1bc",
@@ -76,12 +76,16 @@ self.__precacheManifest = [
     "url": "/img/logo-typo.ab554734.svg"
   },
   {
-    "revision": "a72507acfa234a3cf63c7f290d0bda75",
-    "url": "/img/toncerge-logo.a72507ac.svg"
+    "revision": "f6472f4a952a25d34f657cb548ec68d4",
+    "url": "/img/walkthrough-fab.f6472f4a.gif"
   },
   {
-    "revision": "b833d0ce3d36b961f3f1cdb7c45bf62c",
-    "url": "/media/walkthrough-mobile-search.b833d0ce.mp4"
+    "revision": "d394d3d2839932d60cf0949392e6887c",
+    "url": "/img/walkthrough-drip.d394d3d2.gif"
+  },
+  {
+    "revision": "a72507acfa234a3cf63c7f290d0bda75",
+    "url": "/img/toncerge-logo.a72507ac.svg"
   },
   {
     "revision": "57b03ec647ae63c5960589e86e6d7f81",
@@ -92,19 +96,19 @@ self.__precacheManifest = [
     "url": "/img/about-specialtycoffee-bg.b1d2b4ec.jpg"
   },
   {
+    "revision": "a78b6cf490fff49dd8576d7798fbb196",
+    "url": "/img/walkthrough-search.a78b6cf4.gif"
+  },
+  {
     "revision": "b3aebce7f687f2d2f5abc6783b09eb6a",
     "url": "/img/top-hint-sensaku.b3aebce7.jpg"
   },
   {
-    "revision": "0e8fdd746700bfef597810416c7345c6",
-    "url": "/media/walkthrough-mobile-like.0e8fdd74.mp4"
-  },
-  {
-    "revision": "0de6607a7838d9a1e7ba34ab40d2b5a2",
+    "revision": "021b93e62566f87bea3054d55188684a",
     "url": "/index.html"
   },
   {
-    "revision": "0ac5ecdfd3dc3875dd80",
-    "url": "/css/app.8216819b.css"
+    "revision": "5957d10e443922975eff",
+    "url": "/css/app.f1f3c035.css"
   }
 ];
