@@ -1,35 +1,83 @@
-// const puppeteer = require('puppeteer');
-// (async () => {
-//   const browser = await puppeteer.launch({
-//     dumpio: true
-//   });
-//   const page = await browser.newPage();
-//   await page.goto('https://example.com');
-//   await page.screenshot({
-//     path: 'example.png'
-//   });
-//   browser.close();
-// })();
-// const Nightmare = require('nightmare')
-// import "nightmare"
+var client = require('cheerio-httpcli'),
+  fs = require('fs');
 
-// async function getLatestDate(n, url) {
-//     n.goto(url) // ページへ移動
-//     // 任意のJavaScriptを実行
-//     return n.evaluate(() => document.querySelector('.newsList').children[0].firstChild.textContent.trim())
-//   }
+// callbackを指定しなかったのでPromiseオブジェクトが返る
+var p = client.fetch('http://www.tonya.co.jp/shop/e/esC20_dD/'),
+  itemDatas = [];
 
-//   !(async () => {
-//     try {
-//       const n = new Nightmare({
-//         show: false // trueにするとブラウザが表示されます。
-//       })
+const saveFilePath = './src/data/example.json';
 
-//       const latestDate = await getLatestDate(n, 'http://www.uec.ac.jp/')
-//       console.log(`最新の新着情報の日付は${latestDate}です。`)
+p.then(function (result) {
+  // レスポンスヘッダを参照
+  // console.log(result.response.headers);
 
-//       n.halt()
-//     } catch (e) {
-//       console.error(e)
-//     }
-//   })()
+  // リンク一覧を表示
+  result.$('.StyleD_Item_').each(function (idx) {
+    var $this = result.$(this);
+
+    let data = {
+      name: null,
+      price: null,
+      saleprice: null,
+      link: null,
+      rate: null,
+      img: null,
+      points: {
+        acid: null,
+        bitter: null,
+        sweet: null,
+        body: null,
+        aroma: null,
+      }
+    };
+    var pointsArrIndex = [];
+    for (key in data.points) {
+      pointsArrIndex.push(key);
+    }
+
+    data.name = $this.find('.goods_name_').text();
+    data.price = $this
+      .find('.price_inner_')
+      .text()
+      .match(/[1-9](,)?[0-9]\d*/)[0];
+    data.saleprice = $this.find('.price_pop_').length ? data.price : null;
+    data.link = $this.find('.btn_').attr('href');
+    data.img = $this.find('div.img_ img').attr('src');
+
+    var rate = $this
+      .find('.userreview_ img')
+      .attr('src')
+      .match(/([1-9]\.[0-9])\.(png|jpg|gif)/);
+    data.rate = rate ? rate[1] : null;
+    /**
+     * chart loop
+     */
+    result.$(this).find('.chart_img_').each(function (i, e) {
+      /**
+       * rate loop
+       */
+      result.$(this).find('li').each(function (i, e) {
+        var point = result.$(this).attr('class').replace(/chart/, '');
+        point = point.replace(/(.)/, '$1.');
+
+        data.points[pointsArrIndex[i]] = point;
+      });
+    });
+    // console.log(data)
+    itemDatas.push(data)
+    return data
+  });
+  // console.log(itemDatas);
+
+  fs.writeFileSync(saveFilePath, JSON.stringify(itemDatas), 'utf-8');
+});
+
+p.catch(function (err) {
+  console.log(err);
+});
+
+p.finally(function () {
+  console.log('done');
+});
+
+module.exports = itemDatas;

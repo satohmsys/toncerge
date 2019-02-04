@@ -20,12 +20,12 @@ self.__precacheManifest = [
     "url": "/fonts/NotoSansJP-Regular.65fc19ba.otf"
   },
   {
-    "revision": "84fc8d22e479da3a6f3babd462b087ca",
-    "url": "/fonts/NotoSansJP-Regular.84fc8d22.woff"
-  },
-  {
     "revision": "e4802c4241ac79490cd7b716a7512eb2",
     "url": "/fonts/NotoSansJP-Regular.e4802c42.woff2"
+  },
+  {
+    "revision": "84fc8d22e479da3a6f3babd462b087ca",
+    "url": "/fonts/NotoSansJP-Regular.84fc8d22.woff"
   },
   {
     "revision": "b576f8c959121dd177f891a5f33cb2f6",
@@ -68,20 +68,20 @@ self.__precacheManifest = [
     "url": "/img/icon-history-color.d62de4de.svg"
   },
   {
-    "revision": "25a7dfe7e5d1135c34b523f4b9f0be53",
-    "url": "/img/icon-history.25a7dfe7.svg"
-  },
-  {
     "revision": "e061cbade7a28bf6807361b64071c8c1",
     "url": "/img/icon-favorite.e061cbad.svg"
+  },
+  {
+    "revision": "287d46b8674c6cf98507c9621675f0bf",
+    "url": "/img/icon-about.287d46b8.svg"
   },
   {
     "revision": "b32b82d53a103764562c5c292ebbc1bc",
     "url": "/img/icon-search.b32b82d5.svg"
   },
   {
-    "revision": "287d46b8674c6cf98507c9621675f0bf",
-    "url": "/img/icon-about.287d46b8.svg"
+    "revision": "25a7dfe7e5d1135c34b523f4b9f0be53",
+    "url": "/img/icon-history.25a7dfe7.svg"
   },
   {
     "revision": "f6472f4a952a25d34f657cb548ec68d4",
