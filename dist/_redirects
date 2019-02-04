@@ -1,1 +1,4 @@
-/about /no.html 404
+/home              /
+/blog/my-post.php  /blog/my-post
+/news              /blog
+/google            https://www.google.com
