@@ -6,7 +6,7 @@
           <swiper-slide class="walkthrough__child">
             <div class="walkthrough__child__wrap wrap">
               <div class="walkthrough__child__img">
-      
+                <img src="../../assets/img/walkthrough-drip.gif" width="150" alt="">      
               </div>
               <div class="walkthrough__child__text">
                 お家で、オフィスで、<br class="-only-sp">次に飲むコーヒーに困っていませんか？<br>
@@ -17,7 +17,7 @@
           <swiper-slide class="walkthrough__child">
             <div class="walkthrough__child__wrap wrap">
               <div class="walkthrough__child__img">
-                <video src="../../assets/img/walkthrough-mobile-search.mp4" width="150" muted playsinline autoplay></video>
+                <img src="../../assets/img/walkthrough-search.gif" width="150" alt="">
               </div>
               <div class="walkthrough__child__text">
                 ツマミを動かして、<br class="-only-sp">好みのコーヒーの特徴を設定！<br>
@@ -28,7 +28,7 @@
           <swiper-slide class="walkthrough__child">
             <div class="walkthrough__child__wrap wrap">
               <div class="walkthrough__child__img">
-                <video src="../../assets/img/walkthrough-mobile-like.mp4" width="150" muted playsinline autoplay></video>      
+                <img src="../../assets/img/walkthrough-fab.gif" width="150" alt="">      
               </div>
               <div class="walkthrough__child__text">
                 気になるコーヒーは<strong>お気に入り登録！</strong><br>
