@@ -36,16 +36,16 @@ self.__precacheManifest = [
     "url": "/fonts/NotoSansJP-Bold.c83cbc0f.woff2"
   },
   {
-    "revision": "10db75661489dc658f2825cdadd1f023",
-    "url": "/fonts/NotoSansJP-Bold.10db7566.woff"
-  },
-  {
     "revision": "6c980940392587c8d7d325c07965ebda",
     "url": "/fonts/Rubik-Regular.6c980940.ttf"
   },
   {
     "revision": "394a3b3371914d7a65e80ff82ae35f78",
     "url": "/fonts/Rubik-Medium.394a3b33.ttf"
+  },
+  {
+    "revision": "10db75661489dc658f2825cdadd1f023",
+    "url": "/fonts/NotoSansJP-Bold.10db7566.woff"
   },
   {
     "revision": "87b4e0d5acc5093dfca4c4355b809749",
@@ -72,16 +72,16 @@ self.__precacheManifest = [
     "url": "/img/icon-favorite.e061cbad.svg"
   },
   {
+    "revision": "25a7dfe7e5d1135c34b523f4b9f0be53",
+    "url": "/img/icon-history.25a7dfe7.svg"
+  },
+  {
     "revision": "287d46b8674c6cf98507c9621675f0bf",
     "url": "/img/icon-about.287d46b8.svg"
   },
   {
     "revision": "b32b82d53a103764562c5c292ebbc1bc",
     "url": "/img/icon-search.b32b82d5.svg"
-  },
-  {
-    "revision": "25a7dfe7e5d1135c34b523f4b9f0be53",
-    "url": "/img/icon-history.25a7dfe7.svg"
   },
   {
     "revision": "f6472f4a952a25d34f657cb548ec68d4",
@@ -104,7 +104,7 @@ self.__precacheManifest = [
     "url": "/img/top-hint-sensaku.b3aebce7.jpg"
   },
   {
-    "revision": "a305efd76c62fd865f6745ebde69cea9",
+    "revision": "488508860e94ca6b9286ccbcfce7998b",
     "url": "/index.html"
   },
   {
