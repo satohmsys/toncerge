@@ -3,7 +3,7 @@
     <header class="about__index">
       <div class="wrap">
         <div class="about__index__top">
-          About
+          ABOUT
           <span class="about__index__serviceName serviceName">toncerge</span>
         </div>
       </div>
@@ -99,12 +99,7 @@
             <strong>サービスに関するお問い合わせを珈琲問屋にすることはおやめください。</strong>
           </p>
           <p>
-            また、当サービスはスクレイピングを利用しデータを取得しています。アクセスが集中することで珈琲問屋本体のサービスに負荷がかかる可能性がございます。お目当てのコーヒーは
-            <a
-              href="http://www.tonya.co.jp/shop/"
-              target="_blank"
-            >オンラインストア</a>でお買い求めください。
-          </p>
+            また、当サービスはスクレイピングを利用しデータを取得しています。万が一、珈琲問屋サービス本体に負荷が著しくかかった場合や不適切と判断した場合は予告なく当サービスを閉鎖する可能性があります。</p>
           <h3 class="appSection__subindex">ご利用について</h3>
           <dl>
             <dt>免責事項</dt>
@@ -295,7 +290,7 @@ html {
 
     dd,
     dt {
-      padding: 1em;
+      padding: 0.5em 1em;
     }
 
     dt {
@@ -305,6 +300,7 @@ html {
     }
     dd {
       margin-left: 0;
+      line-height: 1.5;
       word-break: break-all;
     }
   }

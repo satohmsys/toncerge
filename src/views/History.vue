@@ -199,6 +199,7 @@ export default {
       padding-left: 3px;
       font-family: $fontFamily_en;
       font-size: 1.25em;
+      font-weight: 500;
     }
   }
 }
