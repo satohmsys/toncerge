@@ -35,7 +35,7 @@
             <div class="walkthrough__child__img">
               <img src="../../assets/img/walkthrough-fab.gif" width="150" alt>
             </div>
-            <div class="walkthrough__child__text">気になるコーヒーは
+            <div class="walkthrough__child__text">気になるコーヒーは<br class="-only-sp">
               <strong>お気に入り登録！</strong>
               <br>後からまた確認できます。
               <small>
@@ -116,15 +116,19 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
   }
 
   &__child__text {
     margin-top: $space_s;
+    margin-bottom: 40px;
+    padding-bottom: $space_s;
     line-height: 1.75;
   }
 
   &__child__button {
-    margin-top: $space_s;
+    position: absolute;
+    bottom: 20vh;
   }
 
   &__skip {
