@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "287d46b8674c6cf98507c9621675f0bf",
-    "url": "/img/icon-about.287d46b8.svg"
+    "revision": "25a7dfe7e5d1135c34b523f4b9f0be53",
+    "url": "/img/icon-history.25a7dfe7.svg"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
@@ -56,16 +56,16 @@ self.__precacheManifest = [
     "url": "/img/icon-favorite.e061cbad.svg"
   },
   {
-    "revision": "c355898c81141b35a5d6",
-    "url": "/js/app.dbb75c73.js"
+    "revision": "9ebf3e4f6eb6781bccd3",
+    "url": "/js/app.6fb34662.js"
   },
   {
     "revision": "5ba539f471985c2361e8",
     "url": "/js/chunk-vendors.d8a74318.js"
   },
   {
-    "revision": "25a7dfe7e5d1135c34b523f4b9f0be53",
-    "url": "/img/icon-history.25a7dfe7.svg"
+    "revision": "287d46b8674c6cf98507c9621675f0bf",
+    "url": "/img/icon-about.287d46b8.svg"
   },
   {
     "revision": "ab5547344d80d0f00a97ec2794ebe68b",
@@ -104,11 +104,11 @@ self.__precacheManifest = [
     "url": "/img/top-hint-sensaku.b3aebce7.jpg"
   },
   {
-    "revision": "4fb82fe48dcfba63f1788a6fc14bffc6",
+    "revision": "08ebf4e52539e7432e70596f77b79d3d",
     "url": "/index.html"
   },
   {
-    "revision": "c355898c81141b35a5d6",
+    "revision": "9ebf3e4f6eb6781bccd3",
     "url": "/css/app.73e09acd.css"
   }
 ];

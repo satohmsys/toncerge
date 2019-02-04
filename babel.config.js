@@ -2,6 +2,7 @@ const removeConsolePlugin = []
 if (process.env.NODE_ENV === 'production') {
   removeConsolePlugin.push("transform-remove-console")
 }
+console.log('==========================', process.env.NODE_ENV, '==========================', removeConsolePlugin)
 
 module.exports = {
   presets: ["@vue/app"],
