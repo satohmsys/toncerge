@@ -1,18 +1,18 @@
 self.__precacheManifest = [
   {
-    "revision": "25a7dfe7e5d1135c34b523f4b9f0be53",
-    "url": "/img/icon-history.25a7dfe7.svg"
+    "revision": "57b03ec647ae63c5960589e86e6d7f81",
+    "url": "/img/tonya.57b03ec6.png"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "/robots.txt"
   },
   {
-    "revision": "b32b82d53a103764562c5c292ebbc1bc",
-    "url": "/img/icon-search.b32b82d5.svg"
+    "revision": "b1d2b4ecccd6498d5b2f1cc0ba1d25de",
+    "url": "/img/about-specialtycoffee-bg.b1d2b4ec.jpg"
   },
   {
-    "revision": "5ba539f471985c2361e8",
+    "revision": "a3f65bf1505b7941f60f",
     "url": "/css/chunk-vendors.4f943e57.css"
   },
   {
@@ -52,24 +52,36 @@ self.__precacheManifest = [
     "url": "/fonts/Rubik-Bold.87b4e0d5.ttf"
   },
   {
+    "revision": "ab5547344d80d0f00a97ec2794ebe68b",
+    "url": "/img/logo-typo.ab554734.svg"
+  },
+  {
+    "revision": "f7692ac98b44df0c4872",
+    "url": "/js/app.777fd995.js"
+  },
+  {
+    "revision": "a3f65bf1505b7941f60f",
+    "url": "/js/chunk-vendors.0881c790.js"
+  },
+  {
+    "revision": "d62de4de334acc40a2ec858fba655ce6",
+    "url": "/img/icon-history-color.d62de4de.svg"
+  },
+  {
     "revision": "e061cbade7a28bf6807361b64071c8c1",
     "url": "/img/icon-favorite.e061cbad.svg"
   },
   {
-    "revision": "9ebf3e4f6eb6781bccd3",
-    "url": "/js/app.6fb34662.js"
-  },
-  {
-    "revision": "5ba539f471985c2361e8",
-    "url": "/js/chunk-vendors.d8a74318.js"
+    "revision": "25a7dfe7e5d1135c34b523f4b9f0be53",
+    "url": "/img/icon-history.25a7dfe7.svg"
   },
   {
     "revision": "287d46b8674c6cf98507c9621675f0bf",
     "url": "/img/icon-about.287d46b8.svg"
   },
   {
-    "revision": "ab5547344d80d0f00a97ec2794ebe68b",
-    "url": "/img/logo-typo.ab554734.svg"
+    "revision": "b32b82d53a103764562c5c292ebbc1bc",
+    "url": "/img/icon-search.b32b82d5.svg"
   },
   {
     "revision": "f6472f4a952a25d34f657cb548ec68d4",
@@ -80,20 +92,8 @@ self.__precacheManifest = [
     "url": "/img/walkthrough-drip.d394d3d2.gif"
   },
   {
-    "revision": "57b03ec647ae63c5960589e86e6d7f81",
-    "url": "/img/tonya.57b03ec6.png"
-  },
-  {
-    "revision": "b1d2b4ecccd6498d5b2f1cc0ba1d25de",
-    "url": "/img/about-specialtycoffee-bg.b1d2b4ec.jpg"
-  },
-  {
     "revision": "a72507acfa234a3cf63c7f290d0bda75",
     "url": "/img/toncerge-logo.a72507ac.svg"
-  },
-  {
-    "revision": "d62de4de334acc40a2ec858fba655ce6",
-    "url": "/img/icon-history-color.d62de4de.svg"
   },
   {
     "revision": "a78b6cf490fff49dd8576d7798fbb196",
@@ -104,11 +104,11 @@ self.__precacheManifest = [
     "url": "/img/top-hint-sensaku.b3aebce7.jpg"
   },
   {
-    "revision": "08ebf4e52539e7432e70596f77b79d3d",
+    "revision": "9539a103d4f400926f53abc88d2d5704",
     "url": "/index.html"
   },
   {
-    "revision": "9ebf3e4f6eb6781bccd3",
-    "url": "/css/app.73e09acd.css"
+    "revision": "f7692ac98b44df0c4872",
+    "url": "/css/app.6506f7bb.css"
   }
 ];
