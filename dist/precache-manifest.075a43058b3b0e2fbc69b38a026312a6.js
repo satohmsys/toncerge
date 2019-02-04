@@ -72,16 +72,16 @@ self.__precacheManifest = [
     "url": "/img/icon-favorite.e061cbad.svg"
   },
   {
-    "revision": "25a7dfe7e5d1135c34b523f4b9f0be53",
-    "url": "/img/icon-history.25a7dfe7.svg"
+    "revision": "b32b82d53a103764562c5c292ebbc1bc",
+    "url": "/img/icon-search.b32b82d5.svg"
   },
   {
     "revision": "287d46b8674c6cf98507c9621675f0bf",
     "url": "/img/icon-about.287d46b8.svg"
   },
   {
-    "revision": "b32b82d53a103764562c5c292ebbc1bc",
-    "url": "/img/icon-search.b32b82d5.svg"
+    "revision": "25a7dfe7e5d1135c34b523f4b9f0be53",
+    "url": "/img/icon-history.25a7dfe7.svg"
   },
   {
     "revision": "f6472f4a952a25d34f657cb548ec68d4",
@@ -104,8 +104,12 @@ self.__precacheManifest = [
     "url": "/img/top-hint-sensaku.b3aebce7.jpg"
   },
   {
-    "revision": "9539a103d4f400926f53abc88d2d5704",
+    "revision": "4050164b602b76ea78d0480c88b82d20",
     "url": "/index.html"
+  },
+  {
+    "revision": "2e41e916e61bf1f3bf163ed46c90435b",
+    "url": "/img/ogp.jpg"
   },
   {
     "revision": "f7692ac98b44df0c4872",

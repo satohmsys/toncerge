@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.ee575283c8bbd3d122aa3727ecc1731d.js"
+  "/precache-manifest.075a43058b3b0e2fbc69b38a026312a6.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "toncerge"});
