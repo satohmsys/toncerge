@@ -11,7 +11,7 @@
             <div class="clearList" v-if="histories.length">
               <span v-on:click="clearHistory(); isDelete = true">検索履歴を消去する</span>
             </div>
-          </section>        
+          </section>
         </transition>
       </div>
     </header>
@@ -39,7 +39,7 @@
                 <router-link to="/result">この値でもう一度検索する</router-link>
               </div>
             </li>
-          </ul>        
+          </ul>
         </transition>
         <transition name="show">
           <div v-if="isDelete">
@@ -52,7 +52,9 @@
                 <div class="notFound__content">
                   <p>あなたの検索した値を一定期間保存して、このページでまた検索することができます。</p>
                   <p>同じ内容を検索してもラインナップが入れ替わることで、新しいコーヒー豆に出会えるかもしれません。ご活用ください。</p>
-                  <p class="notFound__note">検索履歴は一定期間が経過すると削除されたりされなかったりします。ブラウザや端末を変えると保存されませんのでご注意ください。</p>
+                  <p
+                    class="notFound__note"
+                  >検索履歴は一定期間が経過すると削除されたりされなかったりします。ブラウザや端末を変えると保存されませんのでご注意ください。</p>
                 </div>
               </div>
             </section>
@@ -61,7 +63,7 @@
                 <router-link to="/" class="backtotop">検索にもどる</router-link>
               </div>
             </section>
-          </div>            
+          </div>
         </transition>
       </section>
     </div>
@@ -129,19 +131,19 @@ export default {
     reSearch: function(query) {
       event.stopPropagation();
       event.preventDefault();
-      Object.keys(query).forEach( function( index ){
-        if(index == 'time' ) return;
+      Object.keys(query).forEach(function(index) {
+        if (index == "time") return;
         // console.log( index, query[index] )
-        window.localStorage.setItem( index, query[index] )
-      })
+        window.localStorage.setItem(index, query[index]);
+      });
     },
     /**
      * 履歴を消す
      */
-    clearHistory: function(){
+    clearHistory: function() {
       event.stopPropagation();
       event.preventDefault();
-      window.localStorage.removeItem( 'history' )
+      window.localStorage.removeItem("history");
     }
   }
   // computed: {
@@ -158,7 +160,6 @@ export default {
     line-height: 1;
   }
 }
-
 
 .historyList {
   list-style: none;

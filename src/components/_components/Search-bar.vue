@@ -60,7 +60,7 @@ export default {
       let target = document.querySelector('[name="' + this.item.label + '"]');
       let targetValTips = target.previousElementSibling;
       let pos =
-        ((target.clientWidth / target.getAttribute("max")) + 8) * (this.val-1);
+        (target.clientWidth / target.getAttribute("max") + 8) * (this.val - 1);
       targetValTips.setAttribute(
         "style",
         "transform: translateX(" + pos + "px)"

@@ -45,9 +45,7 @@
             <span v-else>{{data.price}}</span>
             <small class="detail__price__label" v-if="data.saleprice">sale!</small>
           </div>
-          <div class="lot">
-            100g
-          </div>
+          <div class="lot">100g</div>
         </div>
         <ul class="detail__beanScore beanScore">
           <li v-for="item in items" :key="item.name">
@@ -56,15 +54,15 @@
               <dd class="beanScore__score">{{getVal(item.label,data)}}</dd>
             </dl>
           </li>
-        </ul>   
+        </ul>
         <footer class="detail__footer">
           <div class="button button-secondary">
-            <a v-bind:href="'http://tonya.co.jp' + data.link" target="_blank">詳細を見る <small>（珈琲問屋サイト）</small></a>
+            <a v-bind:href="'http://tonya.co.jp' + data.link" target="_blank">詳細を見る
+              <small>（珈琲問屋サイト）</small>
+            </a>
           </div>
-          <div v-on:click.stop="modalToggle(modalPrefix)" class="detail__close">
-            CLOSE
-          </div>
-        </footer>     
+          <div v-on:click.stop="modalToggle(modalPrefix)" class="detail__close">CLOSE</div>
+        </footer>
       </div>
     </modal>
   </div>
@@ -109,7 +107,7 @@ export default {
      */
     getFavoriteStatus: function(data) {
       let favindex = data.link;
-      let favoritesStorage = window.localStorage.getItem("favorites"); 
+      let favoritesStorage = window.localStorage.getItem("favorites");
       let favorites = favoritesStorage ? favoritesStorage.split(",") : [];
       let results = favorites.indexOf(favindex) !== -1;
       return results;
@@ -120,7 +118,7 @@ export default {
     addFavorite: function() {
       let target = event.currentTarget;
       let favindex = target.getAttribute("data-favindex");
-      let favoritesStorage = window.localStorage.getItem("favorites"); 
+      let favoritesStorage = window.localStorage.getItem("favorites");
       let favorites = favoritesStorage ? favoritesStorage.split(",") : [];
       let index = favorites.indexOf(favindex);
       let newFavorites = null;
@@ -137,11 +135,11 @@ export default {
       }
 
       newFavorites = newFavorites.filter(function(e) {
-        return e !== "" && e !== "null" && e !== null &&e !== "undefined";
+        return e !== "" && e !== "null" && e !== null && e !== "undefined";
       });
 
       window.localStorage.setItem("favorites", newFavorites);
-      this.$emit( 'changeFavoritesLength', newFavorites.length )
+      this.$emit("changeFavoritesLength", newFavorites.length);
     },
     /**
      * モーダル開閉
@@ -150,9 +148,7 @@ export default {
       this.$modal.toggle(prefix);
     }
   },
-  computed: {
-    
-  }
+  computed: {}
 };
 </script>
 
@@ -188,13 +184,12 @@ export default {
       top: 20px;
       right: -4px;
 
-      @media screen and (max-width: 480px){
-      width: 32px;
-      height: 32px;
+      @media screen and (max-width: 480px) {
+        width: 32px;
+        height: 32px;
       }
 
       a {
-
         &.-is-favorite {
           background: $brown_bright;
         }
@@ -239,75 +234,72 @@ export default {
   }
 
   ///////// modal
-  .detail{
-    &__img{
+  .detail {
+    &__img {
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    &__name{
+    &__name {
       margin-bottom: 0;
       font-size: $fontsize_m;
       font-weight: bold;
       text-align: center;
     }
 
-    &__price{
+    &__price {
       line-height: 1;
       margin-top: 1em;
       margin-bottom: $space_s/2;
-      color:$color_main;  
+      color: $color_main;
       text-align: center;
       font-weight: 500;
       font-family: $fontFamily_en;
 
-
-      .price{
+      .price {
         display: inline-block;
 
-        &:before{
+        &:before {
           content: "¥";
           display: inline-block;
           font-size: $fontsize_s;
         }
       }
-      &.-sale .price{
+      &.-sale .price {
         color: $color_accent;
         position: relative;
       }
 
-      .lot{
+      .lot {
         margin-left: 5px;
         font-size: 1rem;
         display: inline-block;
-          &:before{
-            content: "/";
-            display: inline-block;
-          }        
+        &:before {
+          content: "/";
+          display: inline-block;
+        }
       }
 
-      &__label{
+      &__label {
         padding-left: 2px;
       }
-
     }
-    .detail__close{
+    .detail__close {
       margin-top: 1em;
     }
 
-    &__beanScore{
+    &__beanScore {
       margin-bottom: $space_s;
       justify-content: center;
 
-      dl{
-
+      dl {
         @media screen and (min-width: 480px) {
           margin-bottom: 0;
-        }        
+        }
       }
 
-      li:last-child dl{
+      li:last-child dl {
         margin-bottom: 0;
         margin-right: 0;
       }

@@ -23,23 +23,23 @@
             <Beantable :result="result" @changeFavoritesLength="setFavoriteLength"></Beantable>
           </li>
         </ul>
-        <div class="notFound" v-else >
+        <div class="notFound" v-else>
           <h2 class="notFound__index">
             <i></i>あなたの好みに近い豆はありませんでした…
           </h2>
-          <h3 class="notFound__hintIndex">
-            検索のヒント
-          </h3>
+          <h3 class="notFound__hintIndex">検索のヒント</h3>
           <div class="notFound__content">
             <p>
-              <strong>各項目を「<span class="numAppear">3</span>」以上に設定</strong>するとヒットしやすくなります。
+              <strong>各項目を「
+                <span class="numAppear">3</span>」以上に設定
+              </strong>するとヒットしやすくなります。
             </p>
             <p>良質なコーヒーは様々な個性があり、どれも絶妙な風味のバランス感を持っていますので、思い切って選んでみましょう。</p>
           </div>
         </div>
         <!-- <figure class="notFound__logo">
           <img src="../assets/img/toncerge-logo.svg" width="100" alt="">
-        </figure> -->
+        </figure>-->
       </section>
       <section class="appSection">
         <div class="button button--primary">
@@ -55,7 +55,6 @@ import Beantable from "@/components/_components/Beantable";
 // import favoritesSetting from "@/components/_mixins/favoriteSetting";
 import Items from "@/data/item.json";
 import Data from "@/data/example.json";
-
 
 export default {
   name: "Result",
@@ -141,19 +140,19 @@ export default {
       /**
        * @description hitscore で配列のソート
        */
-      results.sort(function(a,b){
-        if(a.hitscore<b.hitscore) return 1;
-        if(a.hitscore > b.hitscore) return -1;
-        return 0;        
-      })
+      results.sort(function(a, b) {
+        if (a.hitscore < b.hitscore) return 1;
+        if (a.hitscore > b.hitscore) return -1;
+        return 0;
+      });
 
       return results;
     },
     /**
      * App.vueのグローバル変数「FavCount」を変更
      */
-    setFavoriteLength: function(l){
-      this.$parent.favCount = l
+    setFavoriteLength: function(l) {
+      this.$parent.favCount = l;
     }
   }
 };
@@ -161,8 +160,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/include";
-.contentIndexArea{
-  &__content{
+.contentIndexArea {
+  &__content {
     line-height: 1;
   }
 }
@@ -170,28 +169,26 @@ export default {
 .beansList {
   list-style: none;
 
-  li{
-
+  li {
     &:not(:last-child) {
       border-bottom: 1px solid $color_border;
-    }    
+    }
   }
 }
 
-
-.notFound{
+.notFound {
   padding-top: $space_s;
 
-  &__index{
+  &__index {
     margin-bottom: $space_s;
     font-weight: bold;
     // font-size: $fontsize_m;
     text-align: center;
 
-    i{
-      &:before{
-        content:"Sorry! Not found.";
-        letter-spacing: 0.09em;        
+    i {
+      &:before {
+        content: "Sorry! Not found.";
+        letter-spacing: 0.09em;
         display: block;
         margin-bottom: 10px;
         color: $brown_bright;
@@ -202,7 +199,7 @@ export default {
       }
     }
   }
-  &__hintIndex{
+  &__hintIndex {
     width: 100px;
     line-height: 1;
     margin-right: auto;
@@ -217,9 +214,8 @@ export default {
     background-color: #f8f8f8;
 
     &:before,
-    &:after
-    {
-      content:"";
+    &:after {
+      content: "";
       width: 1px;
       height: 1em;
       transform-origin: center bottom;
@@ -227,26 +223,25 @@ export default {
       background-color: $brown;
     }
 
-    &:before{
-      transform: rotate( -45deg );
+    &:before {
+      transform: rotate(-45deg);
     }
-    &:after{
-      transform: rotate( 45deg );
+    &:after {
+      transform: rotate(45deg);
     }
   }
 
-  .numAppear{
+  .numAppear {
     padding-right: 2px;
     padding-left: 2px;
     font-size: 1.5em;
     color: #d86414;
   }
 
-  &__content{
+  &__content {
     line-height: 1.75;
     padding: 0.1em 1em 0em;
     border: 1px solid $brown;
   }
-
 }
 </style>

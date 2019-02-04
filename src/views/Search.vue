@@ -24,8 +24,8 @@
                 <router-link to="/history">保存</router-link>されます。（ブラウザや端末を変えていない場合）
               </p>
               <h4 class="detail__content__index">指定のコツ</h4>
-              <p>それぞれの値を「
-                <strong class="numAppear">3</strong>」以上にするとヒットしやすくなります。
+              <p>
+                それぞれの値を「<strong class="numAppear">3</strong>」以上にするとヒットしやすくなります。
               </p>
               <p>また、「甘み」「苦み」と、一見、相反するように捉えることができる項目がありますが、気にせずに指定してください。</p>
               <figure>

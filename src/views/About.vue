@@ -2,7 +2,8 @@
   <div class="about">
     <header class="about__index">
       <div class="wrap">
-        <div class="about__index__top">About
+        <div class="about__index__top">
+          About
           <span class="about__index__serviceName serviceName">toncerge</span>
         </div>
       </div>
@@ -16,11 +17,13 @@
           <br class="-only-sp">コーヒーコンシェルジュ
         </h2>
         <div class="about__footer__content">
-          <p>はじめまして。「
+          <p>
+            はじめまして。「
             <span class="serviceName">toncerge</span>」
             <small>（トンシェルジュ）</small>と申します。
           </p>
-          <p>このサービスは、
+          <p>
+            このサービスは、
             <a href="https://www.tonya.co.jp/" target="_blank">珈琲問屋</a>で販売されている「スペシャルティコーヒー」から、あなたに最適な一杯を選んでいただくための、「珈琲問屋のコンシェルジュ」的サービスです。（非公式）
           </p>
           <p>今、世の中にはコーヒーやコーヒー飲料が溢れています。
@@ -71,12 +74,17 @@
       <div class="wrap">
         <h2 class="appSection__index">珈琲問屋とは</h2>
         <div class="about__footer__content">
-          <p>珈琲問屋は、関東圏を中心に海外を含め13の実店舗と
-            <a href="http://www.tonya.co.jp/shop/" target="_blank">オンラインストア</a>を構えるコーヒーの専門店です。<br>
-            珈琲問屋のスタッフの方は選りすぐりの「コーヒー好き」で、質問するとなんでも明るく答えてくださり、問いが「1」に対して「2」も「3」も親切にご案内してくださいます。コーヒーが好きな方、コーヒーに詳しくないけど興味がある方、全てに知っていただきたいと思っていることも当サービスの開発の理由でもあります。
+          <p>
+            珈琲問屋は、関東圏を中心に海外を含め13の実店舗と
+            <a href="http://www.tonya.co.jp/shop/" target="_blank">オンラインストア</a>を構えるコーヒーの専門店です。
+            <br>珈琲問屋のスタッフの方は選りすぐりの「コーヒー好き」で、質問するとなんでも明るく答えてくださり、問いが「1」に対して「2」も「3」も親切にご案内してくださいます。コーヒーが好きな方、コーヒーに詳しくないけど興味がある方、全てに知っていただきたいと思っていることも当サービスの開発の理由でもあります。
           </p>
-          <p>オンラインストアについて詳しくは
-            <a href="http://www.tonya.co.jp/shop/pages/beginner.aspx" target="_blank">こちら</a>をご覧ください。
+          <p>
+            オンラインストアについて詳しくは
+            <a
+              href="http://www.tonya.co.jp/shop/pages/beginner.aspx"
+              target="_blank"
+            >こちら</a>をご覧ください。
           </p>
         </div>
       </div>
@@ -86,11 +94,16 @@
       <div class="wrap">
         <h2 class="appSection__index">当サービスについて</h2>
         <div class="about__footer__content">
-          <p>当サービスは非公式です。
+          <p>
+            当サービスは非公式です。
             <strong>サービスに関するお問い合わせを珈琲問屋にすることはおやめください。</strong>
           </p>
-          <p>また、当サービスはスクレイピングを利用しデータを取得しています。アクセスが集中することで珈琲問屋本体のサービスに負荷がかかる可能性がございます。お目当てのコーヒーは
-            <a href="http://www.tonya.co.jp/shop/" target="_blank">オンラインストア</a>でお買い求めください。
+          <p>
+            また、当サービスはスクレイピングを利用しデータを取得しています。アクセスが集中することで珈琲問屋本体のサービスに負荷がかかる可能性がございます。お目当てのコーヒーは
+            <a
+              href="http://www.tonya.co.jp/shop/"
+              target="_blank"
+            >オンラインストア</a>でお買い求めください。
           </p>
           <h3 class="appSection__subindex">ご利用について</h3>
           <dl>
@@ -111,8 +124,12 @@
     <section class="about__footer">
       <div class="wrap">
         <h3 class="about__footer__index">Development</h3>
-        <div class="about__footer__content">Design, Front-end, Planing:
-          <a href="https://twitter.com/satohmsys" target="_blank">satohmsys</a>
+        <div class="about__footer__content">
+          Design, Front-end, Planing:
+          <a
+            href="https://twitter.com/satohmsys"
+            target="_blank"
+          >satohmsys</a>
         </div>
       </div>
     </section>
@@ -263,13 +280,14 @@ html {
     padding-bottom: 1em;
     display: flex;
 
-    &:first-of-type{
-      &,dt,dd{
+    &:first-of-type {
+      &,
+      dt,
+      dd {
         padding-top: 0;
       }
     }
     &:not(:first-child) {
-      
     }
     &:not(:last-child) {
       border-bottom: 1px solid $color_border;

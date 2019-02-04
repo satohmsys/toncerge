@@ -20,7 +20,11 @@
         <transition name="delete">
           <ul class="beansList" v-if="! isDelete">
             <li v-for="favorite in favorites" :key="favorite.url">
-              <Beantable :location="favorite" :result="favorite" @changeFavoritesLength="setFavoriteLength"></Beantable>
+              <Beantable
+                :location="favorite"
+                :result="favorite"
+                @changeFavoritesLength="setFavoriteLength"
+              ></Beantable>
             </li>
           </ul>
         </transition>
@@ -32,7 +36,10 @@
               </h2>
               <h3 class="notFound__hintIndex">お気に入り登録とは？</h3>
               <div class="notFound__content">
-                <p>お好みの豆を見つけたら、画面のハートマーク<span class="sampleIcon"><i class="icon icon--like icon--like--inline"></i></span>をタップしてください。色が変わったら登録完了です。
+                <p>お好みの豆を見つけたら、画面のハートマーク
+                  <span class="sampleIcon">
+                    <i class="icon icon--like icon--like--inline"></i>
+                  </span>をタップしてください。色が変わったら登録完了です。
                   <br>ここにはお気に入り登録された豆が表示されます。
                 </p>
                 <p
@@ -50,7 +57,10 @@
           </h2>
           <h3 class="notFound__hintIndex">お気に入り登録とは？</h3>
           <div class="notFound__content">
-            <p>お好みの豆を見つけたら、画面のハートマーク<span class="sampleIcon"><i class="icon icon--like icon--like--inline"></i></span>をタップしてください。色が変わったら登録完了です。
+            <p>お好みの豆を見つけたら、画面のハートマーク
+              <span class="sampleIcon">
+                <i class="icon icon--like icon--like--inline"></i>
+              </span>をタップしてください。色が変わったら登録完了です。
               <br>ここにはお気に入り登録された豆が表示されます。
             </p>
             <p class="notFound__note">お気に入りは一定期間が経過すると削除されたりされなかったりします。ブラウザや端末を変えると保存されませんのでご注意ください。</p>
@@ -73,10 +83,9 @@ import Beantable from "@/components/_components/Beantable";
 import Items from "@/data/item.json";
 import Data from "@/data/example.json";
 
-
 export default {
   name: "Favorite",
-  // mixin: [favoritesSetting],  
+  // mixin: [favoritesSetting],
   components: {
     Beantable
   },
@@ -117,9 +126,9 @@ export default {
     /**
      * App.vueのグローバル変数「FavCount」を変更
      */
-    setFavoriteLength: function(l){
-      this.$parent.favCount = l
-    }    
+    setFavoriteLength: function(l) {
+      this.$parent.favCount = l;
+    }
   }
 };
 </script>
@@ -137,7 +146,7 @@ export default {
   }
 }
 
-.sampleIcon{
+.sampleIcon {
   width: 1.2em;
   height: 1.2em;
   margin-right: 3px;
