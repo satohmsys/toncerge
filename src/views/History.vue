@@ -83,7 +83,7 @@
       </section>
       <section class="appSection">
         <div class="button button--primary">
-          <router-link to="/" class="backtotop">検索にもどる</router-link>
+          <router-link to="/search" class="backtotop">検索にもどる</router-link>
         </div>
       </section>
     </div>
